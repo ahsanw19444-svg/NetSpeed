@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Live Network Speed & Coverage Map</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    }
+
+    body {
+      background-color: #0d1117;
+      color: #c9d1d9;
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    /* Privacy Banner */
+    .privacy-notice {
+      background: #238636;
+      color: #ffffff;
+      font-size: 0.85rem;
+      text-align: center;
+      padding: 6px;
+      font-weight: 500;
+    }
+
+    header {
+      background: #161b22;
+      padding: 12px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #30363d;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .title-area h1 {
+      font-size: 1.25rem;
+      color: #58a6ff;
+    }
+    .title-area p {
+      font-size: 0.8rem;
+      color: #8b949e;
+    }
+
+    .tags {
+      display: flex;
+      gap: 8px;
+    }
+
+    .badge {
+      background: #21262d;
+      border: 1px solid #30363d;
+      padding: 4px 10px;
+      border-radius: 12px;
+      font-size: 0.75rem;
+      color: #7ee787;
+    }
+
+    /* Functional Map Container */
+    .map-frame-container {
+      flex: 1;
+      width: 100%;
+      height: 100%;
+      position: relative;
+    }
+
+    iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Zero-Tracking Notice -->
+  <div class="privacy-notice">
+    🛡️ Privacy Guaranteed: No User Tracking | No Sign-up | Zero Personal Data Stored
+  </div>
+
+  <!-- Header -->
+  <header>
+    <div class="title-area">
+      <h1>🌐 Global Speed & Network Radar</h1>
+      <p>Real-time functional speed coverage for 3G, 4G, 5G & Broadband carriers</p>
+    </div>
+    <div class="tags">
+      <span class="badge">Universal Carrier Support</span>
+      <span class="badge">Public Telemetry</span>
+    </div>
+  </header>
+
+  <!-- Live Public Coverage & Speed Engine -->
+  <div class="map-frame-container">
+    <iframe 
+      src="https://www.nperf.com/en/map/embed/PK/-/-/coverage/?theme=dark" 
+      allow="geolocation"
+      title="Universal Live Network Speed Map">
+    </iframe>
+  </div>
+
+</body>
+</html>
